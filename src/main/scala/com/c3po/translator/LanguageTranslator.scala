@@ -4,7 +4,7 @@ import java.util.regex.Pattern
 
 import akka.actor.typed.ActorSystem
 import akka.actor.{Actor, ActorLogging, ActorRef, ActorSystem, Props}
-import com.c3po.translator.C3_PO.languageMapper
+import com.c3po.C3_POApplication.languageMapper
 import com.c3po.translator.LanguageMapper.Translate
 
 object LanguageTranslator {
