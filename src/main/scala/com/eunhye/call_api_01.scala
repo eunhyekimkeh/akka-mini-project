@@ -21,12 +21,14 @@ object call_api_01 extends App {
 
     //    if (text.length > 4500) text = text.substring(0, 4500) // text 최대 4500까지 가능
 
-    val path : Path = Paths.get("/resources/sungho")
-    println("check >>", path)
-    val resourcesPath = getClass.getResource("/sungho.text")
-    println(resourcesPath.getPath)
+//    val path : Path = Paths.get("/resources/sungho")
+//    println("check >>", path)
+//    val resourcesPath = getClass.getResource("/sungho.text")
+//    println(resourcesPath.getPath)
 
-    val credentials: GoogleCredentials  = GoogleCredentials.fromStream(new FileInputStream("akka-mini-project/src/main/resources/sungho.text"))
+
+    val fileStream : FileInputStream = new FileInputStream("/Users/eunhyekim/Client_Workspace/akka-mini-project/src/main/resources/sungho")
+    val credentials: GoogleCredentials  = GoogleCredentials.fromStream(fileStream)
         .createScoped(Lists.newArrayList("https://www.googleapis.com/auth/cloud-platform"));
 
 
